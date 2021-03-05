@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_items_category_broken_wrappers",
+  "info": {
+    "name": "CategoryBrokenWrapper",
+    "icon": "democrat",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "broken_category": {
+      "model": "broken-category"
+    }
+  }
+}

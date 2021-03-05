@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_items_items_list_brokens",
+  "info": {
+    "name": "ItemsListBroken",
+    "icon": "sad-cry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "items.category-broken-wrapper"
+    },
+    "defaultCategory": {
+      "model": "broken-category"
+    }
+  }
+}
