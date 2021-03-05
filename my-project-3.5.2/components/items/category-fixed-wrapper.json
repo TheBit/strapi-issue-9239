@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_items_category_fixed_wrappers",
+  "info": {
+    "name": "CategoryFixedWrapper",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fixed_category": {
+      "model": "fixed-category"
+    }
+  }
+}

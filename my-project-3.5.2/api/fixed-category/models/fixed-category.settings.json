@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fixed_categories",
+  "info": {
+    "name": "FixedCategory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "items": {
+      "collection": "item"
+    }
+  }
+}

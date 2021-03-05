@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_items_items_list_fixeds",
+  "info": {
+    "name": "ItemsListFixed",
+    "icon": "sad-tear",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "items.category-fixed-wrapper"
+    },
+    "defaultCategory": {
+      "model": "fixed-category"
+    }
+  }
+}

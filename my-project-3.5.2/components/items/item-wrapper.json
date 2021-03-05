@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_items_item_wrappers",
+  "info": {
+    "name": "ItemWrapper",
+    "icon": "angry"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "model": "item"
+    }
+  }
+}

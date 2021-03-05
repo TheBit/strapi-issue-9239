@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "broken_categories",
+  "info": {
+    "name": "BrokenCategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "items.item-wrapper"
+    }
+  }
+}
