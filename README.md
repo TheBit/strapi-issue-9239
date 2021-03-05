@@ -19,5 +19,120 @@ Qwerty123
 1. open http://localhost:1337/graphql
 1. send query:
 ```
-TBD
+{
+  page(id: 1) {
+    title
+    uiComponents {
+      __typename
+      ... on ComponentItemsItemsListBroken {
+        defaultCategory {
+          name
+          items {
+            item {
+              name
+            }
+          }
+        }
+        categories {
+          broken_category {
+            name
+            items {
+              item {
+                name
+              }
+            }
+          }
+        }
+      }
+      ... on ComponentItemsItemsListFixed {
+        defaultCategory {
+          name
+          items {
+            name
+          }
+        }
+        categories {
+          fixed_category {
+            name
+            items {
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+8. see the response:
+```
+{
+  "data": {
+    "page": {
+      "title": "Homepage",
+      "uiComponents": [
+        {
+          "__typename": "ComponentItemsItemsListBroken",
+          "defaultCategory": {
+            "name": "Sedan",
+            "items": null
+          },
+          "categories": [
+            {
+              "broken_category": {
+                "name": "Crossover",
+                "items": null
+              }
+            },
+            {
+              "broken_category": {
+                "name": "Sedan",
+                "items": null
+              }
+            }
+          ]
+        },
+        {
+          "__typename": "ComponentItemsItemsListFixed",
+          "defaultCategory": {
+            "name": "Crossover",
+            "items": [
+              {
+                "name": "Toyota RAV4"
+              },
+              {
+                "name": "Subaru Forester"
+              }
+            ]
+          },
+          "categories": [
+            {
+              "fixed_category": {
+                "name": "Sedan",
+                "items": [
+                  {
+                    "name": "Toyota Camry"
+                  }
+                ]
+              }
+            },
+            {
+              "fixed_category": {
+                "name": "Crossover",
+                "items": [
+                  {
+                    "name": "Toyota RAV4"
+                  },
+                  {
+                    "name": "Subaru Forester"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
